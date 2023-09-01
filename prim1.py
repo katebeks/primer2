@@ -1,4 +1,8 @@
-str1 = "123"
-print(type(str1))
-str1 = int(str1)
-print(type(str1))
+f = "Top Repositories"
+print(f[::])
+print(f[::2])
+print(f[1::2])
+print(f[::-1])
+print(f[5::])
+print(f[:5:])
+print(f[-2:-9:-1])

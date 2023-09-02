@@ -1,7 +1,7 @@
-a = float(input("Введите число - "))
-b = float(input("Введите число - "))
-c = float(input("Введите число - "))
-if (a+b > c) and (a+c > b) and (c+b > a):
-    print("Существует треугольник со сторонами " + str(a) + " " + str(b) + " " + str(c))
+n = int(input("Введите число от 1 до 99 - "))
+if (n % 10 >= 5) or (n // 10 == 1):
+    print("Мне " + str(n) + " лет ")
+elif n % 10 == 1:
+    print("Мне " + str(n) + " год ")
 else:
-    print("Не существует треугольник со сторонами " + str(a) + " " + str(b) + " " + str(c))
+    print("Мне " + str(n) + " годa ")

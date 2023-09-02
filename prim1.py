@@ -6,21 +6,21 @@ try:
     month2 = int(input("Введите месяц рождения 2-го человека- "))
     dey2 = int(input("Введите день рождения 2-го человека- "))
     if year1 < year2:
-        print("старше 1-ый человек")
+        print("Cтарше 1-ый человек")
     elif year1 == year2:
         if month1 < month2:
-            print("старше 1-ый человек")
+            print("Cтарше 1-ый человек")
         elif month1 == month2:
             if dey1 < dey2:
-                print("старше 1-ый человек")
+                print("Cтарше 1-ый человек")
             elif dey1 == dey2:
                 print("Они ровестники")
             else:
-                print("старше 2-oй человек")
+                print("Cтарше 2-oй человек")
         else:
-            print("старше 2-oй человек")
+            print("Cтарше 2-oй человек")
     else:
-        print("старше 2-oй человек")
+        print("Cтарше 2-oй человек")
 except ValueError:
     print("Некорректное значение")
 

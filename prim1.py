@@ -1,19 +1,26 @@
-dey = 3
-month = 9
-year = 2023
 try:
-    year1 = int(input("Введите год своего рождения - "))
-    month1 = int(input("Введите месяц своего рождения - "))
-    dey1 = int(input("Введите день своего рождения - "))
+    year1 = int(input("Введите год рождения  1-го человека- "))
+    month1 = int(input("Введите месяц рождения 1-го человека- "))
+    dey1 = int(input("Введите день рождения 1-го человека- "))
+    year2 = int(input("Введите год рождения 2-го человека- "))
+    month2 = int(input("Введите месяц рождения 2-го человека- "))
+    dey2 = int(input("Введите день рождения 2-го человека- "))
+    if year1 < year2:
+        print("старше 1-ый человек")
+    elif year1 == year2:
+        if month1 < month2:
+            print("старше 1-ый человек")
+        elif month1 == month2:
+            if dey1 < dey2:
+                print("старше 1-ый человек")
+            elif dey1 == dey2:
+                print("Они ровестники")
+            else:
+                print("старше 2-oй человек")
+        else:
+            print("старше 2-oй человек")
+    else:
+        print("старше 2-oй человек")
 except ValueError:
     print("Некорректное значение")
-except TypeError:
-    print("Неверный тип")
-else:
-    n = year - year1
-    if month1 > month:
-        n = n-1
-    elif month1 == month:
-        if dey < dey1:
-            n = n - 1
-print("Ваш возраст - ", n)
+

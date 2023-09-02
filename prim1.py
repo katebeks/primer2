@@ -1,7 +1,9 @@
-n = int(input("Введите число от 1 до 99 - "))
-if (n % 10 >= 5) or (n // 10 == 1):
-    print("Мне " + str(n) + " лет ")
-elif n % 10 == 1:
-    print("Мне " + str(n) + " год ")
+try:
+    n = int(input("Введите число - "))
+    n = n + 'error'
+except ValueError:
+    print("Некорректное значение")
+except TypeError:
+    print("Неверный тип")
 else:
-    print("Мне " + str(n) + " годa ")
+    print("Вы ввели корректное чисто ", n)

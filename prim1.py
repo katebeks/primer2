@@ -1,8 +1,3 @@
-x = int(input("Введите число "))
-k = 1
-y = 1
-while k <= x:
-    y = y * k
-    #print(a3)
-    k += 1
-print("Результат - ", y)
+for i in range(10000):
+    if i % 11 == 0:
+        print(i," кратно 11")

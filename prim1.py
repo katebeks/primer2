@@ -1,8 +1,6 @@
-f = "Top Repositories"
-print(f[::])
-print(f[::2])
-print(f[1::2])
-print(f[::-1])
-print(f[5::])
-print(f[:5:])
-print(f[-2:-(len(f)-2):-1])
+x = int(input("Введите миимум "))
+y = int(input("Введите максимум "))
+n = int(input("Введите шаг "))
+for i in range(x, y, n):
+    print(i)
+

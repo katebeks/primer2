@@ -1,3 +1,6 @@
-for i in range(10000):
-    if i % 11 == 0:
-        print(i," кратно 11")
+a = int(input("Введите минимальный  элемент "))
+b = int(input("Введите максимальный  элемент "))
+sum1 = 0
+for i in range(a+1,b):
+    sum1 += i
+print(" Сумма элементов = ", sum1)

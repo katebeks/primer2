@@ -1,6 +1,7 @@
-x = int(input("Введите миимум "))
-y = int(input("Введите максимум "))
-n = int(input("Введите шаг "))
-for i in range(x, y, n):
-    print(i)
-
+x = input("Введите число ")
+k = len(x)
+y = ""
+while k > 0:
+    y = y + x[k-1]
+    k -= 1
+print("Результат - ", y)

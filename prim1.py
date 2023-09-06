@@ -6,16 +6,18 @@ b = int(input("Введите количество столбцов "))
 for i in range(a):
     list2 = []
     for j in range(b):
-        f = random.randint(-10, 10)
+        f = random.randint(-9, 9)
         list2.append(f)
     list1.append(list2)
 for i in list1:
     print(i)
 k = 0
-maxx = 0
-for i in list1:
-    print(i[k])
-    if maxx < i[k]:
-        maxx = i[k]
+rez = 0
+o = 0
+for i in range(1,a):
+    for j in range(k+1):
+        o = list1[i][j]
+        if o < 0:
+            rez += 1
     k += 1
-print("Максимальный элемент диоганали матрицы - ", maxx)
+print("Кооличество чисел меньше 0 под главной диагональю - ", rez)

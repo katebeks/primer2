@@ -1,27 +1,20 @@
-list1 = [5, "dog cat mam house mam", "cat mam dad milk", "dad mam dog", "cat cat mam cat", "dog cat house mam"]
+f = open("primer.txt", 'r')
+list1 = f.readlines()
+print(list1)
 str1 = ""
-list2 = []
-for i in list1:
-    print(i)
-for i in range(1, list1[0]+1):
-    if i == list1[0]:
-        str1 = str1 + list1[i]
-    else:
-        str1 = str1 + list1[i] + " "
-list2 = list(str1.split(" "))
-#print(list2)
-list3 = list(set(list2))
-list3.sort()
-print(list3)
-obj1 = dict()
+summ = 0
+list3 = []
+for i in range(len(list1)):
+    str1 = list1[i]
+    str1.replace("\n", "")
+    print(str1)
+    list2 = str1.split(" ")
+    summ += int(list2[2])
+    if int(list2[2]) < 3:
+        list3.append(i)
+srb = summ/len(list1)
+print("Средний балл класса - ", srb)
+print("Оценки меньше 3 баллов:")
 for i in list3:
-    j = list2.count(i)
-    obj1[i] = j
-maxx = 0
-keyy = ""
-for key, val in obj1.items():
-    print(key, "-", val )
-    if maxx < val:
-        maxx = val
-        keyy = key
-print("Слово, которое встречается чаще всего - ", keyy)
+    print(list1[i])
+f.close()

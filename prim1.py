@@ -1,11 +1,12 @@
-with (open("primer.txt", 'r', encoding='utf-8') as f):
-    list1 = f.readlines()
-    print(list1)
-    print("Колличество строк - ", len(list1))
-    m = 1
-    for i in list1:
-        print("Символов в ", m, " строке - ", len(i.replace("\n", '')))
-        list2 = list(i.split(" "))
-        print("Слов в ", m, " строке - ", len(list2))
-        m += 1
+import random
 
+
+def Gen(a,b):
+    global mass
+    mass = []
+    for i in range(10):
+        mass.append(random.randint(a, b))
+a = int(input("Введите начало диопазона "))
+b = int(input("Введите конец диопазона "))
+Gen(a,b)
+print(mass)

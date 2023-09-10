@@ -1,12 +1,9 @@
 import random
-
-
-def Gen(a,b):
-    global mass
-    mass = []
-    for i in range(10):
-        mass.append(random.randint(a, b))
-a = int(input("Введите начало диопазона "))
-b = int(input("Введите конец диопазона "))
-Gen(a,b)
-print(mass)
+ch = int(input("Введите число "))
+def rang(ch):
+    k = 0
+    while ch != 0:
+        ch = ch // 10
+        k +=1
+    return (k)
+print("Колличество разрядов числа - ", rang(ch))

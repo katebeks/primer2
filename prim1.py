@@ -1,5 +1,8 @@
-from paket import modul3, modul2, modul1
+x = int(input("Введите число - "))
+def sumcifr(x):
+    if x // 10 == 0:
+        return x
+    else:
+        return x%10+sumcifr(x//10)
 
-print(modul1.summ(4, 6))
-print(modul2.raz(10, 5))
-print(modul3.proiz(4, 5))
+print(sumcifr(x))

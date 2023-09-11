@@ -1,8 +1,5 @@
-str1 = "lakjfnv;ha z dhfnv jan;kjdfnv lknlkdfb  alkdfjblka"
-list1 = list(str1)
-print(list1)
-for i in range(len(list1)-1, -1,-1):
-    if list1.count(list1[i]) > 1:
-        list1.pop(i)
-list1 = tuple(list1)
-print(list1)
+from paket import modul3, modul2, modul1
+
+print(modul1.summ(4, 6))
+print(modul2.raz(10, 5))
+print(modul3.proiz(4, 5))

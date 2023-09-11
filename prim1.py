@@ -1,13 +1,18 @@
-def registr1(func):
-    def wrapper(*x):
-        y = func(*x)
-        y = list(y.split(" "))
-        y[1] = str(y[1]).upper()
-        y = str(y[0]) + " " + str(y[1])
-        print(y)
-    return wrapper
-@registr1
-def hello(x):
-     return "Привет "+x
-x = input("Введите имя ")
-hello(x)
+class Animals:
+    def __init__(self, vid, name):
+        self.vid = vid
+        self.name = name
+
+    def spisok(self):
+        print("Вид: " + self.vid + " по кличке - " + self.name)
+
+cat1 = Animals("кот","Барсик")
+cat2 = Animals("кот","Васька")
+dog1 = Animals("собака","Джек")
+rebit1 = Animals("кролик","Ушастик")
+dog2 = Animals("собака","Боб")
+cat1.spisok()
+cat2.spisok()
+dog1.spisok()
+rebit1.spisok()
+dog2.spisok()

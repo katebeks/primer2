@@ -1,6 +1,16 @@
-from paket.katalog1 import modul1, modul2
-from paket.katalog2 import modul3
+def registr1(func):
+    def wrapper():
+        y = func()
+        #print(y)
+        #y = list(y.split(" "))
+        y = str(y).upper()
+        #y = str(y[0]) + " " + str(y[1])
+        print("Привет "+y)
+    return wrapper
+@registr1
+def hello():
+    x = input("Введите имя ")
+    print("Привет "+x)
+    return x
 
-print(modul1.summ(4, 6))
-print(modul2.raz(10, 5))
-print(modul3.proiz(4, 5))
+hello()

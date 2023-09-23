@@ -49,7 +49,6 @@ class Morskkie(Animals):
 
     def age_a(self):
         print("Возраст морского животного - " + str(self.age))
-
 cat1 = Animals("собака","Барсик", 3)
 cat1.vid_a()
 cat1.name_a()
